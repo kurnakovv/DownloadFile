@@ -19,7 +19,7 @@ public class FileController : ControllerBase
     {
         try
         {
-            string filePath = Path.Combine(_env.WebRootPath, "MaksimKurnakovBackendDotNetWebDeveloper.pdf");
+            string filePath = Path.Combine(_env.WebRootPath ?? "~\\wwwroot\\", "MaksimKurnakovBackendDotNetWebDeveloper.pdf");
             string fileType = "application/pdf";
             return PhysicalFile(filePath, fileType);
         }
