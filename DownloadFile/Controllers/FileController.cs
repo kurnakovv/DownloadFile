@@ -17,8 +17,15 @@ public class FileController : ControllerBase
     [HttpGet]
     public IActionResult Download()
     {
-        string filePath = Path.Combine(_env.WebRootPath, "MaksimKurnakovBackendDotNetWebDeveloper.pdf");
-        string fileType = "application/pdf";
-        return PhysicalFile(filePath, fileType);
+        try
+        {
+            string filePath = Path.Combine(_env.WebRootPath, "MaksimKurnakovBackendDotNetWebDeveloper.pdf");
+            string fileType = "application/pdf";
+            return PhysicalFile(filePath, fileType);
+        }
+        catch (Exception ex)
+        {
+            return Ok(ex.Message);
+        }
     }
 }
