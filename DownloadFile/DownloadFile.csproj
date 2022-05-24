@@ -6,17 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\Files\MaksimKurnakovBackendDotNetWebDeveloper.pdf" />
-    <Content Remove="wwwroot\MaksimKurnakovBackendDotNetWebDeveloper.pdf" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Files\MaksimKurnakovBackendDotNetWebDeveloper.pdf" />
-    <None Include="wwwroot\MaksimKurnakovBackendDotNetWebDeveloper.pdf" />
   </ItemGroup>
 
 </Project>
