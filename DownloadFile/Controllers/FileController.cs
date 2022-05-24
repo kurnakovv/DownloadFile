@@ -25,7 +25,7 @@ public class FileController : ControllerBase
         }
         catch (Exception ex)
         {
-            return Ok(ex.Message);
+            return Ok(ex.Message + " Stack trace::: " + ex.StackTrace);
         }
     }
 }
